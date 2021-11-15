@@ -1,9 +1,11 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
+import { CertificateEdit } from "../feature/CertificateEdit/CertificateEdit";
 import { Home } from "../feature/Home/Home";
 import { InjectionPlan } from "../feature/InjectionPlan/InjectionPlan";
 import { InjectionRegister } from "../feature/InjectionRegister/InjectionRegister";
 import { MedicalUnit } from "../feature/MedicalUnit/MedicalUnit";
+import { Notification } from "../feature/Notification/Notification";
 import { PersonalInfo } from "../feature/PersonalInfo/PersonalInfo";
 import { UnitInfo } from "../feature/UnitInfo/UnitInfo";
 import { MainLayout } from "../pages/MainLayout";
@@ -18,6 +20,8 @@ export const MainPageRoutes = () => {
         <Route path="/info" render={() => <PersonalInfo/>} />
         <Route path="/unitInfo" render={() => <UnitInfo/>} />
         <Route path="/injectPlan" render={() => <InjectionPlan/>} />
+        <Route path="/certiEdit" render={() => <CertificateEdit/>} />
+        <Route path="/notify" render={() => <Notification/>} />
       </Switch>
     </MainLayout>
   );

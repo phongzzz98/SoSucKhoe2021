@@ -28,7 +28,7 @@ export const ChooseDateAndVaccine = (props: ChooseDateAndVaccineProps) => {
                     label="Chọn vaccine"
                     rules={[{ required: true }]}
                 >
-                    <Select defaultValue={undefined} onChange={(value)=>{setSelectedVaccineID(value)}} className="select-vaccine" placeholder="Chọn vaccine">
+                    <Select onChange={(value)=>{setSelectedVaccineID(value)}} className="select-vaccine" placeholder="Chọn vaccine">
                         {
                             vaccineList.map((vaccine) =>
                             (<Select.Option key={vaccine.idvaccine} value={vaccine.idvaccine}>

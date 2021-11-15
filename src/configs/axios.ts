@@ -3,7 +3,7 @@ import { getAccessToken } from "../utils/localStorage";
 
 export const axiosInstance = axios.create({
   baseURL: 'https://tiemchungv1.herokuapp.com',
-  timeout: 9000,
+  timeout: 12000,
   headers: { "X-Custom-Header": "foobar" },
 });
 

@@ -1,0 +1,9 @@
+.certificate-edit-main{
+    padding: 20px;
+}
+.action-buttons-certi-edit{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+    width: 100%;
+}

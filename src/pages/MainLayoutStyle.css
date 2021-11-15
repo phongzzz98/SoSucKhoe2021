@@ -11,24 +11,24 @@
     font-size: 30px;
 
 }
-
+.header-app > a {
+    display: flex;
+}
 .open-nav-btn {
     padding: 20px 0 20px 20px;
     color: #FFF;
 }
 
 .open-nav-btn:hover {
-    color: rgb(172, 163, 255);
+    color: rgb(255, 155, 41);
 }
 
 .header-logo {
     color: #FFF;
-    align-self: auto;
     margin: auto 0 auto 10px;
 }
 
 .header-avatar {
-    align-self: auto;
     margin: auto 0 auto 20px;
 }
 

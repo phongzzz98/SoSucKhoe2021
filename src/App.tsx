@@ -8,6 +8,7 @@ import { useDispatch } from "react-redux";
 import { useEffect } from "react";
 import { getAllVaccineInfoAction } from "./feature/InjectionRegister/actions/InjectRegisAction";
 import { getAllUnitAction } from "./feature/MedicalUnit/actions/MedicalAction";
+import { getAllCitizenAction } from "./feature/CertificateEdit/actions/CertiEditAction";
 
 function App() {
   const dispatch = useDispatch()
@@ -15,6 +16,7 @@ function App() {
   useEffect(() => {
     dispatch(getAllVaccineInfoAction());
     dispatch(getAllUnitAction());
+    dispatch(getAllCitizenAction());
   }, [dispatch]);
 
   return (

@@ -30,7 +30,9 @@ export const Home = () => {
             <Link to="/medicalUnit">
               <CardButton imgURL={hospital} title="Cơ sở y tế" />
             </Link>
-            <CardButton imgURL={bellNoti} title="Thông báo lịch tiêm" />
+            <Link to="/notify">
+              <CardButton imgURL={bellNoti} title="Thông báo lịch tiêm" />
+            </Link>
             <CardButton imgURL={reply} title="Phản hồi" />
           </div>
         </div>
@@ -42,7 +44,9 @@ export const Home = () => {
             <Link to="/injectPlan">
               <CardButton imgURL={injection} title="Kế hoạch tiêm chủng" />
             </Link>
-            <CardButton imgURL={certificate} title="Hồ sơ tiêm" />
+            <Link to="/certiEdit">
+              <CardButton imgURL={certificate} title="Điều chỉnh hồ sơ tiêm" />
+            </Link>
             <Link to="/unitInfo">
               <CardButton imgURL={userInfo} title="Thông tin đơn vị" />
             </Link>

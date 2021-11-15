@@ -82,7 +82,7 @@ export const NavBar = () => {
               </Link>
             </Menu.Item>
             <Menu.Item key="6" icon={<NotificationOutlined />}>
-              <Link to="/citizen">
+              <Link to="/notify">
                 <span className="navbar-span">Thông báo lịch tiêm</span>
               </Link>
             </Menu.Item>
@@ -132,7 +132,7 @@ export const NavBar = () => {
             </Menu.Item>
             <Menu.Item key="4" icon={<CheckCircleOutlined />}>
               <Link to="/certiEdit">
-                <span className="navbar-span">Hồ sơ tiêm</span>
+                <span className="navbar-span">Chỉnh hồ sơ</span>
               </Link>
             </Menu.Item>
             <Menu.Item key="3" icon={<InfoCircleOutlined />}>
