@@ -1,0 +1,26 @@
+.personal-info-main{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    font-size: 18px;
+    font-weight: 600;
+}
+.info-row{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-self: center;
+}
+.info-column{
+    width: 45%;
+    margin-top: 20px;
+    padding-right: 80px;
+}
+
+.about{
+    padding: 10px;
+}
+.info-label{
+    margin-right: 20px;
+}
+.info{
+    font-size: 1.3em;
+}

@@ -1,0 +1,22 @@
+.card-item {
+    padding: 10px;
+    margin: 20px;
+    width: 100%;
+    border: 5px solid #fa4f00;
+    border-radius: 25% 10%;
+    transition: all 0.2s ease-in-out;
+}
+.card-item:hover{
+    filter: brightness(80%);
+    border: 9px solid #fa4f00;
+}
+.card-img{
+    padding: 30px;
+    width: 100%;
+    height: auto;
+}
+.ant-card-meta-title{
+    color: #061161;
+    font-size: 16px;
+}
+

@@ -1,0 +1,64 @@
+.register-tab {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.choose-dateAndVacc-container {
+    width: 40%;
+    padding: 20px;
+}
+
+.chooseDate-form {
+    width: 100%;
+}
+
+.chooseDate-form-item label {
+    font-size: 1.3em;
+    font-weight: 600;
+}
+
+.chooseDate-form-item .ant-picker {
+    width: 100%;
+    font-weight: 600;
+}
+
+.chooseDate-form-item .ant-select-selector {
+    width: 100%;
+    font-size: 1.3em;
+}
+
+.chooseDate-form-item #chosenDate {
+    font-size: 1.2em;
+}
+
+.search-unit-form {
+    display: flex;
+    justify-content: space-around;
+}
+
+.choose-unit-container {
+    width: 100%;
+    border-top: 1px solid #555;
+    padding: 30px;
+    color: blue;
+}
+
+.unit-table {
+    border-right: 1px solid #ddd;
+}
+
+.unit-table table th {
+    font-size: 1.3em;
+    font-weight: 600;
+    border: 1px solid #ddd;
+}
+
+.unit-table table td {
+    font-size: larger;
+    border: 1px solid #ddd;
+}
+
+.unit-table .ant-radio-wrapper .ant-radio .ant-radio-inner {
+    border-color: rgb(255, 0, 140);
+}

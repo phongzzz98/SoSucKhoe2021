@@ -1,0 +1,16 @@
+.home-page {
+    height: 100%;
+    width: 100%;
+    padding-left: 100px;
+    padding-right: 100px;
+    display: flex;
+    flex-direction: column;
+    background: url('../../assets/background.jpg');
+    background-size: cover;
+}
+.row{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    align-self: center;
+}
