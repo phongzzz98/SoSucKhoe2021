@@ -1,4 +1,4 @@
-import { Button, Checkbox, Form, Input, Table } from "antd";
+import { Form, Input, Table } from "antd";
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { IMedicalUnit } from "../../../MedicalUnit/interface/MedicalType";

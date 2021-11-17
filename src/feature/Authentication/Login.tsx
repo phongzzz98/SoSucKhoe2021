@@ -1,11 +1,10 @@
 import { Button, Checkbox, Form, Input } from 'antd'
-import React, { FormEvent, useEffect, useState } from 'react'
-import { useDispatch, useSelector } from 'react-redux'
+import { FormEvent, useEffect, useState } from 'react'
+import { useDispatch } from 'react-redux'
 import { useHistory } from 'react-router-dom'
 import { getAccessToken } from '../../utils/localStorage'
-import { getUserLoginInfoAction, loginAction } from './actions/LoginAction'
+import { loginAction } from './actions/LoginAction'
 import './LoginStyle.css'
-import { uidSelector, userInfoSelector } from './reducers/LoginReducer'
 
 export const Login = () => {
     const [userName, setUserName] = useState("")

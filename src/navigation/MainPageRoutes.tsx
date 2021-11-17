@@ -1,6 +1,7 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
 import { CertificateEdit } from "../feature/CertificateEdit/CertificateEdit";
+import { Certification } from "../feature/Certification/Certification";
 import { Home } from "../feature/Home/Home";
 import { InjectionPlan } from "../feature/InjectionPlan/InjectionPlan";
 import { InjectionRegister } from "../feature/InjectionRegister/InjectionRegister";
@@ -22,6 +23,7 @@ export const MainPageRoutes = () => {
         <Route path="/injectPlan" render={() => <InjectionPlan/>} />
         <Route path="/certiEdit" render={() => <CertificateEdit/>} />
         <Route path="/notify" render={() => <Notification/>} />
+        <Route path="/certification" render={() => <Certification/>} />
       </Switch>
     </MainLayout>
   );

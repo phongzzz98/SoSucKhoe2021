@@ -8,7 +8,7 @@ import { NotificationItem } from '../NotificationItem/NotificationItem';
 import { Avatar } from 'antd';
 import { IInjectPlanByCitizen } from '../../../InjectionPlan/interface/InjectionPlanType';
 import { useEffect, useState } from 'react';
-import moment, { min } from 'moment';
+import moment from 'moment';
 
 interface NotificationMainProps {
     injectPlanByCitizen: IInjectPlanByCitizen[]
@@ -18,32 +18,36 @@ export const NotificationMain = (props: NotificationMainProps) => {
     const { injectPlanByCitizen } = props
     const [notifyInfo, setNotifyInfo] = useState<IInjectPlanByCitizen>()
     const [isNoti, setIsNoti] = useState(false)
-    const renderNotify = () => {
-        if (injectPlanByCitizen.length === 0) {
-            setIsNoti(false)
-        }
-        else if (injectPlanByCitizen.length === 1) {
-            setIsNoti(true)
-            setNotifyInfo(injectPlanByCitizen[0])
-        }
-        else {
-            for (let i = 0; i <= injectPlanByCitizen.length; i++) {
-                let x = moment(injectPlanByCitizen[i].Ngay_Tiemkh, "YYYY-MM-DD")
-                let y = moment(injectPlanByCitizen[i + 1].Ngay_Tiemkh, "YYYY-MM-DD")
-                if (x < y && x <= moment("YYYY-MM-DD")) {
-                    setIsNoti(true)
-                    setNotifyInfo(injectPlanByCitizen[i])
-                }
-                else {
-                    setIsNoti(true)
-                    setNotifyInfo(injectPlanByCitizen[i + 1])
+
+    useEffect(() => {
+        const renderNotify = () => {
+            if (injectPlanByCitizen.length === 0) {
+                setIsNoti(false)
+            }
+            else if (injectPlanByCitizen.length === 1 && moment(injectPlanByCitizen[0].Ngay_Tiemkh, "YYYY-MM-DD") <= moment("YYYY-MM-DD")) {
+                setIsNoti(true)
+                setNotifyInfo(injectPlanByCitizen[0])
+            }
+            else if (injectPlanByCitizen.length > 1) {
+                for (let i = 0; i < injectPlanByCitizen.length - 1; i++) {
+                    let x = moment(injectPlanByCitizen[i].Ngay_Tiemkh, "YYYY-MM-DD")
+                    let y = moment(injectPlanByCitizen[i + 1].Ngay_Tiemkh, "YYYY-MM-DD")
+                    if (x < y && x <= moment("YYYY-MM-DD")) {
+                        setIsNoti(true)
+                        setNotifyInfo(injectPlanByCitizen[i])
+                    }
+                    else {
+                        setIsNoti(true)
+                        setNotifyInfo(injectPlanByCitizen[i + 1])
+                    }
                 }
             }
+            else {
+                setIsNoti(false)
+            }
         }
-    }
-    useEffect(() => {
         renderNotify()
-    }, [renderNotify, injectPlanByCitizen])
+    }, [injectPlanByCitizen])
 
     if (isNoti === true) {
         return (
@@ -52,7 +56,7 @@ export const NotificationMain = (props: NotificationMainProps) => {
                     <legend>Địa điểm</legend>
                     <NotificationItem img={hospital} title="Đơn vị tiêm" info={notifyInfo?.tendonvi!} />
                     <NotificationItem img={location} title="Địa chỉ" info={notifyInfo?.address! + ", " + notifyInfo?.district + ", " + notifyInfo?.city} />
-                    <NotificationItem img={calendar} title='Ngày tiêm' info={notifyInfo?.Ngay_Tiemkh!} />
+                    <NotificationItem img={calendar} title='Ngày tiêm' info={moment(notifyInfo?.Ngay_Tiemkh!).format('DD-MM-YYYY').toString()} />
                     <NotificationItem img={time} title="Thời gian" info={notifyInfo?.gio_Tiem!} />
                     <legend>Thông tin cá nhân</legend>
                     <div className='noti-user-info'>

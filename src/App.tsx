@@ -1,5 +1,4 @@
 import "./App.css";
-import { MainLayout } from "./pages/MainLayout";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import PrivateRoute from "./navigation/PrivateRoute";
 import { MainPageRoutes } from "./navigation/MainPageRoutes";

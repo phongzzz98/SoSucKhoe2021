@@ -51,7 +51,7 @@ export const NavBar = () => {
             />
           </div>
           <div className="user-info">
-            <span>{userInfo.fullname}</span>
+            <span>{userInfo?.fullname}</span>
           </div>
         </div>
         <div className="navbar-menu">
@@ -67,7 +67,7 @@ export const NavBar = () => {
               </Link>
             </Menu.Item>
             <Menu.Item key="3" icon={<CheckCircleOutlined />}>
-              <Link to="/user">
+              <Link to="/certification">
                 <span className="navbar-span">Chứng nhận tiêm chủng</span>
               </Link>
             </Menu.Item>
@@ -115,7 +115,7 @@ export const NavBar = () => {
             />
           </div>
           <div className="user-info">
-            <span>{userInfo.tendonvi}</span>
+            <span>{userInfo?.tendonvi}</span>
           </div>
         </div>
         <div className="navbar-menu">

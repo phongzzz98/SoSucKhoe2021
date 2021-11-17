@@ -14,5 +14,9 @@
     align-self: center;
 }
 .noti-item-title{
-    margin-top: 5px;
+    font-variant: small-caps;
+}
+.noti-item-info{
+    font-size: 1em;
+    color: orangered;
 }
